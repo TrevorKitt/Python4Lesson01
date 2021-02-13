@@ -1,4 +1,3 @@
-print("Hello World")
 class Person:
     def __init__(self, name, age, hair_colour, phone_number):
         self.name = name
@@ -29,14 +28,14 @@ class Student(Person):
         self.gpa = gpa
 
 class Employee(Person):
-    def __init__(self, name, age, hair_colour, height, phone_number, job_title, employee_type):
+    def __init__(self, name, age, hair_colour, phone_number, job_title, employee_type):
         super(Employee, self).__init__(name, age, hair_colour, phone_number)
         self.job_title = job_title
         self.employee_type = employee_type
 
-person = Person("Sam", 12, "Brown")
+person = Person("Sam", 12, "Brown", "123-456-7321")
 print(person.get_greeting())
-student = Student("Madeline", 14, "Black", 8, 204534)
+student = Student("Madeline", 14, "Black", "456-654-4567", 8, 204534, "Emilia Xu", "456-654-9876", 3.4)
 print(student.grade)
 print(student.get_greeting())
 
