@@ -1,9 +1,9 @@
+print("Hello World")
 class Person:
-    def __init__(self, name, age, hair_colour, height, phone_number):
+    def __init__(self, name, age, hair_colour, phone_number):
         self.name = name
         self.age = age
         self.hair_colour = hair_colour
-        self.height = height
         self.phone_number = phone_number
 
     def get_greeting(self):
@@ -11,13 +11,16 @@ class Person:
 
 
 class Student(Person):
-    def __init__(self, name, age, hair_colour, height, phone_number, grade, student_number, parent_name, parent_phone_number, gpa):
-        super(Student, self).__init__(name, age, hair_colour, height, phone_number)
+    def __init__(self, name, age, hair_colour, phone_number, grade, student_number, parent_name, parent_phone_number, gpa):
+        super(Student, self).__init__(name, age, hair_colour, phone_number)
         self.grade = grade
         self.student_number = student_number
         self.parent_name = parent_name
         self.parent_phone_number = parent_phone_number
         self.gpa = gpa
+
+    def get_student_number(self):
+        return self.student_number
 
     def get_gpa(self):
         return self.gpa
@@ -27,7 +30,7 @@ class Student(Person):
 
 class Employee(Person):
     def __init__(self, name, age, hair_colour, height, phone_number, job_title, employee_type):
-        super(Employee, self).__init__(name, age, hair_colour, height, phone_number)
+        super(Employee, self).__init__(name, age, hair_colour, phone_number)
         self.job_title = job_title
         self.employee_type = employee_type
 
